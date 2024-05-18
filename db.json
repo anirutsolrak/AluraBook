@@ -1,0 +1,19 @@
+{
+    "produtos": [
+      {
+        "id": 1,
+        "nome": "Livro A",
+        "genero": "Ficção",
+        "autor": "Autor A",
+        "imagem": "link_para_imagem_a"
+      },
+      {
+        "id": 2,
+        "nome": "Livro B",
+        "genero": "Suspense",
+        "autor": "Autor B",
+        "imagem": "link_para_imagem_b"
+      }
+    ]
+  }
+  
