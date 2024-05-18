@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce - Desafio CRUD</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>  
+<body>
     <header>
         <div class="container">
             <nav>
@@ -19,42 +18,34 @@
         </div>
     </header>
     <main>
-        <section id="produtos">          
+        <section id="produtos">
             <div class="container">
                 <h1>Meus Livros</h1>
                 <div class="produto-lista">
                     <!-- Produtos serão listados aqui -->
-                    <p class="nenhum-produto">Nenhum produto foi adicionado.</p>
                 </div>
             </div>
         </section>
         <section id="formulario">
             <div class="container">
                 <form>
-                    <input type="text" placeholder="Nome do Livro" id="nome-livro">
-                    <input type="text" placeholder="Gênero" id="genero">
-                    <input type="text" placeholder="Autor" id="autor">
-                    <label for="imagem">Adicione uma imagem:</label>
-                    <input type="file" id="imagem" accept="image/*">
-                    <button class="btn" id="add-produto-btn">Adicionar Produto</button>
-                    <button class="btn" id="cancelar-btn">Cancelar</button>
+                    <label for="nome">Nome do livro:</label>
+                    <input type="text" name="nome" required>
+
+                    <label for="genero">Gênero:</label>
+                    <input type="text" name="genero" required>
+
+                    <label for="autor">Autor:</label>
+                    <input type="text" name="autor" required>
+
+                    <label for="imagem">URL da imagem:</label>
+                    <input type="text" name="imagem" required>
+
+                    <button class="btn" type="submit">Adicionar Produto</button>
                 </form>
             </div>
-        </section>    
-    </main>  
-    <footer>   
-        <div class="container">
-            <ul class="social-media">
-                <li><a href="https://www.linkedin.com/in/carlos-eduardo-turina-014a5425b" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://github.com/anirutsolrak"><i class="fab fa-github"></i></a></li>
-            </ul>
-            <div class="copyright">
-                <p>© 2024 por Carlos Eduardo Turina. <br>
-                  Criado com Alura e Oracle
-                </p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

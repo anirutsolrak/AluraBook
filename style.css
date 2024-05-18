@@ -1,7 +1,7 @@
 /* Estilo geral */
 body {
   color: coral;
-    text-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    /*text-shadow: 2px 2px 5px black, -2px -2px 5px black;*/
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@ main {
     background-image: url('cover.jpg');
     background-size: cover;
     background-position: center; 
+    
 }
 
 .container {
