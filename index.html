@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce - Desafio CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="container">
+      <!--<div class="container">
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="produtos.html">Produtos</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> -->  
     </header>
     <main>
         <section id="produtos">
@@ -38,14 +39,27 @@
                     <label for="autor">Autor:</label>
                     <input type="text" name="autor" id="autor" required>
                   
-                    <label for="imagem">URL da imagem:</label>
-                    <input type="text" name="imagem" id="imagem" required>
-                  
+                    <label for="imagem">Selecione uma imagem:</label>
+                    <input type="file" name="imagem" id="imagem" accept="image/*" required>
+
                     <button class="btn" type="submit">Adicionar Produto</button>
                   </form>
             </div>
         </section>
     </main>
+    <footer>   
+        <div class="container">
+            <ul class="social-media">
+                <li><a href="https://www.linkedin.com/in/carlos-eduardo-turina-014a5425b" target="_blank"><i class="fab fa-linkedin-in"></i></a><br>LinkedIn</li>
+                <li><a href="https://github.com/anirutsolrak"><i class="fab fa-github"></i></a><br>GitHub</li>
+            </ul>
+            <div class="copyright">
+                <p>© 2024 por Carlos Eduardo Turina. <br>
+                  Criado com Alura e Oracle
+                </p>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

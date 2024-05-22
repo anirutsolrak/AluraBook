@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const nomeInput = document.querySelector('#nome');
   const generoInput = document.querySelector('#genero');
   const autorInput = document.querySelector('#autor');
-  const imagemInput = document.querySelector('#imagem');
+  const imagemInput = document.querySelector('#imagem'); // input para o upload de imagem
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
       nome: nomeInput.value,
       genero: generoInput.value,
       autor: autorInput.value,
-      imagem: imagemInput.value
+      imagem: imagemInput.files[0].name // Recupera o nome do arquivo da imagem
     };
 
     try {
