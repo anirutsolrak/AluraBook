@@ -4,7 +4,7 @@
     { 
       "src": "**/*.js", 
       "use": "@vercel/node",
-      "installCommand": "npm install --include=devDependencies" // Adicione esta linha
+      "installCommand": "npm install --include=devDependencies"
     }
   ],
   "routes": [
