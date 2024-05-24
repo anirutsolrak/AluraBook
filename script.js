@@ -105,14 +105,15 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
 
     // Gera um ID aleatório para o novo produto
-    const novoId = Math.floor(Math.random() * 1000000); // Gera um número aleatório entre 0 e 999999
+    const novoId = Math.floor(Math.random() * 1000000);
+    const novoIdString = novoId.toString();
 
     const novoProduto = {
-      id: novoId, // Adiciona o ID ao objeto novoProduto
+      id: novoIdString, // Adiciona o ID ao objeto novoProduto
       nome: nomeInput.value,
       genero: generoInput.value,
       autor: autorInput.value,
-      imagem: imagemInput.files[0].name // Recupera o nome do arquivo da imagem
+      imagem: imagemInput.value // Recupera o nome do arquivo da imagem
     };
 
     try {
