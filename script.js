@@ -1,7 +1,8 @@
 // Funções para lidar com requisições HTTP
+// Funções para lidar com requisições HTTP
 async function getProdutos() {
   try {
-    const response = await fetch(process.env.JSON_SERVER_URL); // URL da API
+    const response = await fetch('https://api-alura-book-lilac.vercel.app/'); // URL da API
     const produtos = await response.json();
     return produtos;
   } catch (error) {
@@ -11,7 +12,7 @@ async function getProdutos() {
 
 async function postProduto(novoProduto) {
   try {
-    const response = await fetch(process.env.JSON_SERVER_URL, {
+    const response = await fetch('https://api-alura-book-lilac.vercel.app/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -27,7 +28,7 @@ async function postProduto(novoProduto) {
 
 async function deleteProduto(id) {
   try {
-    const response = await fetch(`${process.env.JSON_SERVER_URL}/${id}`, {
+    const response = await fetch(`https://api-alura-book-lilac.vercel.app/${id}`, {
       method: 'DELETE'
     });
     return response.ok; 
@@ -35,6 +36,7 @@ async function deleteProduto(id) {
     console.error('Erro ao excluir produto:', error);
   }
 }
+
 
 // Função para buscar e renderizar produtos
 async function fetchProdutos() {
