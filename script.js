@@ -1,7 +1,7 @@
 // Funções para lidar com requisições HTTP
 async function getProdutos() {
   try {
-    const response = await fetch('https://api-alura-book-lilac.vercel.app/'); // URL da API
+    const response = await fetch('https://api-alura-book-lilac.vercel.app/produtos'); // URL da API
     const produtos = await response.json();
     return produtos;
   } catch (error) {
@@ -11,7 +11,7 @@ async function getProdutos() {
 
 async function postProduto(novoProduto) {
   try {
-    const response = await fetch('https://api-alura-book-lilac.vercel.app/', {
+    const response = await fetch('https://api-alura-book-lilac.vercel.app/produtos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ async function postProduto(novoProduto) {
 
 async function deleteProduto(id) {
   try {
-    const response = await fetch(`https://api-alura-book-lilac.vercel.app/${id}`, {
+    const response = await fetch(`https://api-alura-book-lilac.vercel.app/produtos/${id}`, {
       method: 'DELETE'
     });
     return response.ok; 
