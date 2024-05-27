@@ -8,20 +8,19 @@ body {
 }
 
 main {
-    padding: 5rem;
+    padding: 5vw; /* 5 viewport widths */
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 2vw; /* 2 viewport widths */
     background-image: url('cover.jpg');
     background-size: cover;
     background-position: center; 
 }
 
 .container { 
-    margin: 2rem ;
+    margin: 2vw 0; /* 2 viewport widths */
     gap: 3px;
     text-align: center;
-    
 }
 
 /* Header */
@@ -29,8 +28,7 @@ header {
     background-color: #333; /* Cor de fundo do cabeçalho */
     color: #fff; /* Cor do texto do cabeçalho */
     text-align: center;
-    padding: 1rem 0 2rem 0;
-    
+    padding: 1vw 0 2vw 0; /* 1 e 2 viewport widths */
 }
 
 nav ul {
@@ -42,7 +40,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1.5vw; /* 1.5 viewport widths */
 }
 
 nav ul li a {
@@ -57,15 +55,15 @@ nav ul li a:hover {
 
 /* Seção de produtos */
 #produtos {
-    padding:3rem 0;
-    height: 50vh;
+    padding-bottom: 10vw; /* 10 viewport widths */
+    height: 50vh; /* Altura fixa em porcentagem da viewport */
     overflow-y: auto;
     text-align: center;
     border: 1px solid #ddd;
     max-width: 75%;
-        
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #produtos .container {
@@ -75,17 +73,17 @@ nav ul li a:hover {
 }
 
 #produtos h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 2.4vw; /* 2.4 viewport widths */
+    margin-bottom: 2vw; /* 2 viewport widths */
     color: #fff;
 }
 
 .produto-lista {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    height: 55rem;
+    gap: 1vw; /* 1 viewport width */
+    justify-content: space-around; /* Ajusta o espaçamento entre os cards */
+    height: 55vh; /* Altura fixa em porcentagem da viewport */
 }
 
 .produto-card {
@@ -94,13 +92,12 @@ nav ul li a:hover {
     opacity: 0.8;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 25%;
-    height: 33%;
+    width: 25vw; /* 25 viewport widths */
+    height: 45vh; /* Define a altura do card automaticamente */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 10rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -110,8 +107,7 @@ nav ul li a:hover {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%;
-    padding-bottom: 2rem;
+    width: 11vw; /* 11 viewport widths */
 }
 
 .produto-card h3:hover,
@@ -123,15 +119,15 @@ nav ul li a:hover {
     border-radius: 5px;
     position: absolute;
     z-index: 10;
-    max-width: 200px; /* Ajuste conforme necessário */
+    max-width: 20vw; /* Ajuste conforme necessário */
 }
 
 .produto-card img.produto-imagem {
-    width: 80%; /* Defina o tamanho máximo desejado */
-    height: 75%; /* Defina o tamanho máximo desejado */
-    object-fit:contain;
+    width: 20vw; /* Define a largura máxima desejada */
+    height: 20vw; /* Define a altura máxima desejada */
+    object-fit: contain;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 1vw; /* 1 viewport width */
 }
 
 .produto-card .produto-info {
@@ -149,17 +145,39 @@ nav ul li a:hover {
 .delete-icon {
     color: red; /* Cor do ícone de exclusão */
     cursor: pointer;
-    font-size: 20px;
+    font-size: 2vw; /* 2 viewport widths */
     position: absolute;
-    top: -10px; /* Ajuste conforme necessário */
-    right: -10px; /* Ajuste conforme necessário */
+    top: -1vw; /* -1 viewport width */
+    right: -1vw; /* -1 viewport width */
 }
 
 /* Seção de formulário */
 #formulario {
     background-color: orangered;
     opacity: 0.8;
-    margin-bottom: 1px;
+    padding: 0 2vw; /* 2 viewport widths */
+    align-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formulario .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: -3vw; /* -3 viewport widths */
+    margin-top: 1.7vw; /* 1.7 viewport widths */
+}
+
+#formulario .social-media li {
+    display: flex; 
+    align-items: center;
+}
+
+#formulario .social-media li a {
+    font-size: 1.8vw; /* 1.8 viewport widths */
+    margin-right: 5px; 
 }
 
 #formulario .container {
@@ -173,31 +191,33 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: -4vw; /* -4 viewport widths */
+    padding: 0 3vw; /* 3 viewport widths */
+}
+
+#formulario form label {
+    margin-bottom: 5px; /* Ajusta a margem inferior dos labels */
+    font-weight: bold;
 }
 
 #formulario form input[type="text"],
 #formulario form input[type="file"] {
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 1vw; /* 1 viewport width */
+    padding: 1vw; /* 1 viewport width */
     width: 100%;
-    max-width: 300px;
+    max-width: 30vw; /* 30 viewport widths */
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-#formulario form label {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
 #formulario form .btn {
-    padding: 10px 20px;
+    padding: 1vw 2vw; /* 1 e 2 viewport widths */
     border: none;
     background-color: #333; /* Cor de fundo do botão */
     color: #fff; /* Cor do texto do botão */
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 1vw; /* 1 viewport width */
 }
 
 #formulario form .btn:hover {
@@ -209,7 +229,9 @@ footer {
     background-color: #333; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto do rodapé */
     text-align: center;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-media {
@@ -219,13 +241,13 @@ footer {
 
 .social-media li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 1vw; /* 1 viewport width */
 }
 
 .social-media li a {
     color: #fff; /* Cor do texto das redes sociais */
     text-decoration: none;
-    font-size: 20px;
+    font-size: 2vw; /* 2 viewport widths */
 }
 
 .social-media li a:hover {
@@ -233,6 +255,51 @@ footer {
 }
 
 .copyright {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 2vw; /* 2 viewport widths */
+    font-size: 1.4vw; /* 1.4 viewport widths */
+}
+
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        margin: 0 -5vw 0 -5vw; /* -5 viewport widths */
+        flex-direction: column;
+        align-items: center;                
+        gap: 2vw; /* 2 viewport widths */
+        background-image: url('cover.jpg');
+        background-size: cover;
+        background-position: center; 
+    }
+    
+    #produtos {
+        padding: 0rem 3vw; /* 3 viewport widths */
+        height: 50vh; /* Altura fixa em porcentagem da viewport */
+        overflow-y: auto;
+        text-align: center;
+        border: 1px solid #ddd;
+        max-width: 75%;
+    }
+    
+
+    .produto-card {        
+        width: 15vw; /* 15 viewport widths */
+        height: 13vw; /* 13 viewport widths */
+    }
+
+    .produto-card h3 {
+        max-width: 14vw; /* 14 viewport widths */
+    }
+
+    .produto-card img.produto-imagem {
+        width: 11vw; /* 11 viewport widths */
+        height: 10vw; /* 10 viewport widths */
+    }
+    .produto-lista {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1vw; /* 1 viewport width */
+        justify-content: center;
+        height: 55vh; /* Altura fixa em porcentagem da viewport */
+        flex-direction: column;
+    }
 }

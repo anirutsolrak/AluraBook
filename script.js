@@ -1,5 +1,4 @@
 // Funções para lidar com requisições HTTP
-// Funções para lidar com requisições HTTP
 async function getProdutos() {
   try {
     const response = await fetch('https://api-alura-book-lilac.vercel.app/'); // URL da API
@@ -57,22 +56,27 @@ function renderProdutos(produtos) {
     const produtoElement = document.createElement('div');
     produtoElement.classList.add('produto-card'); 
 
+    const contentDiv = document.createElement('div'); // Adicione um div para conter o conteúdo do card
+    contentDiv.classList.add('card-content');
+
     const nome = document.createElement('h3');
     nome.textContent = produto.nome;
-    produtoElement.appendChild(nome);
+    contentDiv.appendChild(nome);
 
     const genero = document.createElement('p');
     genero.textContent = `Gênero: ${produto.genero}`;
-    produtoElement.appendChild(genero);
+    contentDiv.appendChild(genero);
 
     const autor = document.createElement('p');
     autor.textContent = `Autor: ${produto.autor}`;
-    produtoElement.appendChild(autor);
+    contentDiv.appendChild(autor);
 
     const imagem = document.createElement('img');
     imagem.src = produto.imagem;
     imagem.classList.add('produto-imagem'); 
-    produtoElement.appendChild(imagem);
+    contentDiv.appendChild(imagem);
+
+    produtoElement.appendChild(contentDiv); // Adicione a div ao produto-card
 
     const botaoExcluir = document.createElement('button');
     botaoExcluir.classList.add('excluir');
