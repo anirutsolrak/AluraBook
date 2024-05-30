@@ -1,6 +1,7 @@
 /* Estilo geral */
 body {
-    color: #fff; /* Cor do texto */
+    height: 100%;
+    color: black; /* Cor do texto */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,73 +9,30 @@ body {
 }
 
 main {
-    padding: 5vw; /* 5 viewport widths */
+    height: 100%;
+    padding: 5rem; /* 5 viewport widths */
     display: flex;
-    flex-direction: row;
-    gap: 2vw; /* 2 viewport widths */
+    flex-direction: column;
+    gap: 2vw;
     background-image: url('cover.jpg');
     background-size: cover;
     background-position: center; 
 }
 
-.container { 
-    margin: 2vw 0; /* 2 viewport widths */
-    gap: 3px;
-    text-align: center;
-}
-
-/* Header */
-header {
-    background-color: #333; /* Cor de fundo do cabeçalho */
-    color: #fff; /* Cor do texto do cabeçalho */
-    text-align: center;
-    padding: 1vw 0 2vw 0; /* 1 e 2 viewport widths */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 1.5vw; /* 1.5 viewport widths */
-}
-
-nav ul li a {
-    color: #fff; /* Cor do texto do menu */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
 /* Seção de produtos */
-#produtos {
-    padding-bottom: 10vw; /* 10 viewport widths */
+#produtos {   
     height: 50vh; /* Altura fixa em porcentagem da viewport */
     overflow-y: auto;
     text-align: center;
     border: 1px solid #ddd;
-    max-width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#produtos .container {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #produtos h1 {
-    font-size: 2.4vw; /* 2.4 viewport widths */
-    margin-bottom: 2vw; /* 2 viewport widths */
+    font-size: 2.7vw; /* 2.4 viewport widths */    
     color: #fff;
 }
 
@@ -82,52 +40,60 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 1vw; /* 1 viewport width */
-    justify-content: space-around; /* Ajusta o espaçamento entre os cards */
-    height: 55vh; /* Altura fixa em porcentagem da viewport */
+    justify-content: center;
+    height: 55vh; 
+    overflow-y: auto;
+}
+
+.card {
+    width: 80%;
+    background-color:darkgoldenrod;
+    opacity: 0.9;
+    border: 2px solid white;
+    
 }
 
 .produto-card {
-    background-color: orangered; /* Cor de fundo do card */
-    color: white; /* Cor do texto do card */
-    opacity: 0.8;
-    border: 1px solid #ddd;
+    background-color: darkgoldenrod; 
+    color: black;  
+    width: 100%;
+    opacity: 0.9;
+    border: 1px solid white;
     border-radius: 5px;
     width: 25vw; /* 25 viewport widths */
-    height: 45vh; /* Define a altura do card automaticamente */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
+    }
 
 .produto-card h3,
 .produto-card .produto-info p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 11vw; /* 11 viewport widths */
+    width: 11vw;
 }
 
 .produto-card h3:hover,
 .produto-card .produto-info p:hover {
     white-space: normal;
     overflow: visible;
-    background-color: orangered;
+    background-color: darkgoldenrod;
     padding: 5px;
     border-radius: 5px;
     position: absolute;
     z-index: 10;
-    max-width: 20vw; /* Ajuste conforme necessário */
+    max-width: 20vw; 
 }
 
 .produto-card img.produto-imagem {
-    width: 20vw; /* Define a largura máxima desejada */
-    height: 20vw; /* Define a altura máxima desejada */
+    width: 20vw; 
+    height: 20vw; 
     object-fit: contain;
-    border-radius: 5px;
-    margin-bottom: 1vw; /* 1 viewport width */
+    border-radius: 50%;
+    margin-bottom: 1vw;
+
 }
 
 .produto-card .produto-info {
@@ -153,75 +119,47 @@ nav ul li a:hover {
 
 /* Seção de formulário */
 #formulario {
-    background-color: orangered;
+    background-color: darkgoldenrod;
     opacity: 0.8;
-    padding: 0 2vw; /* 2 viewport widths */
-    align-content: space-evenly;
+    padding: 1rem; 
+    flex-wrap: wrap;
+    align-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-}
-
-#formulario .social-media {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin-bottom: -3vw; /* -3 viewport widths */
-    margin-top: 1.7vw; /* 1.7 viewport widths */
-}
-
-#formulario .social-media li {
-    display: flex; 
-    align-items: center;
-}
-
-#formulario .social-media li a {
-    font-size: 1.8vw; /* 1.8 viewport widths */
-    margin-right: 5px; 
-}
-
-#formulario .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center; 
 }
 
 #formulario form {
     display: flex;
+    gap: 3px;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: -4vw; /* -4 viewport widths */
-    padding: 0 3vw; /* 3 viewport widths */
+    border: 3px solid white;
+    padding: 2rem 4rem;
+}
+
+#formulario form input {
+    font-size: medium;         
+    width: 100%;
+    height: 2rem;
+    align-content: center;
+    align-items: center;
+}
+
+#formulario form button {
+    font-size: medium;         
+    width: 20%;
+    height: 2rem;
+    align-content: center;
+    align-items: center;
 }
 
 #formulario form label {
-    margin-bottom: 5px; /* Ajusta a margem inferior dos labels */
-    font-weight: bold;
-}
-
-#formulario form input[type="text"],
-#formulario form input[type="file"] {
-    margin-bottom: 1vw; /* 1 viewport width */
-    padding: 1vw; /* 1 viewport width */
-    width: 100%;
-    max-width: 30vw; /* 30 viewport widths */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#formulario form .btn {
-    padding: 1vw 2vw; /* 1 e 2 viewport widths */
-    border: none;
-    background-color: #333; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1vw; /* 1 viewport width */
-}
-
-#formulario form .btn:hover {
-    background-color: #555; /* Cor do botão ao passar o mouse */
+    
+    align-self: flex-start;
+    width: 20vw;
 }
 
 /* Footer */
@@ -229,77 +167,74 @@ footer {
     background-color: #333; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto do rodapé */
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 1vw 0; /* 1 viewport width */
 }
 
-.social-media {
+footer .social-media {
     list-style: none;
+    display: flex;
+    justify-content: center;
     padding: 0;
+    margin: 0;
 }
 
-.social-media li {
-    display: inline-block;
+footer .social-media li {
     margin: 0 1vw; /* 1 viewport width */
 }
 
-.social-media li a {
-    color: #fff; /* Cor do texto das redes sociais */
-    text-decoration: none;
+footer .social-media li a {
+    color: #fff; /* Cor dos ícones sociais */
     font-size: 2vw; /* 2 viewport widths */
+    text-decoration: none;
 }
 
-.social-media li a:hover {
-    color: #ccc; /* Cor do texto das redes sociais ao passar o mouse */
+footer .social-media li a:hover {
+    color: #ddd; /* Cor dos ícones ao passar o mouse */
 }
 
-.copyright {
-    margin-top: 2vw; /* 2 viewport widths */
-    font-size: 1.4vw; /* 1.4 viewport widths */
-}
-
+/* Ajustes de responsividade */
 @media (max-width: 768px) {
     main {
-        display: flex;
-        margin: 0 -5vw 0 -5vw; /* -5 viewport widths */
         flex-direction: column;
-        align-items: center;                
-        gap: 2vw; /* 2 viewport widths */
-        background-image: url('cover.jpg');
-        background-size: cover;
-        background-position: center; 
-    }
-    
-    #produtos {
-        padding: 0rem 3vw; /* 3 viewport widths */
-        height: 50vh; /* Altura fixa em porcentagem da viewport */
-        overflow-y: auto;
-        text-align: center;
-        border: 1px solid #ddd;
-        max-width: 75%;
-    }
-    
-
-    .produto-card {        
-        width: 15vw; /* 15 viewport widths */
-        height: 13vw; /* 13 viewport widths */
+        align-items: center;
     }
 
-    .produto-card h3 {
-        max-width: 14vw; /* 14 viewport widths */
+    #produtos,
+    #formulario {
+      width: 100%;
+      
+    }
+    #produtos h1 {
+        font-size: 4vw;
+        
+    }
+   .card-img-top.produto-imagem {
+        padding-top: 1rem;
+        width: 100%;
+    }
+  
+    .produto-card {
+        color: black;
+        font-style: italic;
+        background-color: #333;
+       width: 100%; 
+    }
+
+    .card {
+        width: 70%;
     }
 
     .produto-card img.produto-imagem {
-        width: 11vw; /* 11 viewport widths */
-        height: 10vw; /* 10 viewport widths */
+        align-self: center;
+        width: 100%; 
+        height: 40vw;
     }
-    .produto-lista {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1vw; /* 1 viewport width */
-        justify-content: center;
-        height: 55vh; /* Altura fixa em porcentagem da viewport */
-        flex-direction: column;
+
+    #formulario form input,
+    #formulario form button {
+        width: 100%;
+        height: 3rem; 
+        font-size: medium;
     }
+ 
 }

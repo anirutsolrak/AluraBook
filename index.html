@@ -4,58 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce - Desafio CRUD</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body>  
     <header>
-        <B>"Bem vindos a minha estante"</B> 
     </header>
     <main>
-        <section id="produtos">
-            <div class="container">
-                <!--<h1>Meus Livros</h1>-->
+        <section id="produtos">          
+                <h1>Meus Livros</h1>
                 <div class="produto-lista">
-                    <!-- Produtos serão listados aqui -->
+                    <p class="nenhum-produto">Nenhum produto foi adicionado.</p>
                 </div>
-            </div>
         </section>
         <section id="formulario">
-            <div class="container">
-                <form>
-                    <label for="nome">Nome do livro:</label>
-                    <input type="text" name="nome" id="nome" required>
-                  
-                    <label for="genero">Gênero:</label>
-                    <input type="text" name="genero" id="genero" required>
-                  
-                    <label for="autor">Autor:</label>
-                    <input type="text" name="autor" id="autor" required>
-                  
-                    <label for="imagem">Insira a url da imagem:</label>
-                    <input type="text" name="imagem" id="imagem" required>
-                  
-                    <button class="btn" type="submit">Adicionar Produto</button>
-                    <div class="social-media">
-                        <li><a href="https://www.facebook.com/" target="_blank">Facebook <i class="fab fa-facebook-f"></i></a></li>
-                        <br>
-                        <li><a href="https://www.instagram.com/" target="_blank">Instagram <i class="fab fa-instagram"></i></a></li>
-                    </div>
-                  </form>
-            </div>
-        </section>
-    </main>
-    <footer>   
-        <div class="container">
-            <ul class="social-media">
-                <li><a href="https://www.linkedin.com/in/carlos-eduardo-turina-014a5425b" target="_blank"><i class="fab fa-linkedin-in"></i></a><br>LinkedIn</li>
-                <li><a href="https://github.com/anirutsolrak"><i class="fab fa-github"></i></a><br>GitHub</li>
-            </ul>
-            <div class="copyright">
-                <p>© 2024 por Carlos Eduardo Turina. <br>
-                  Criado com Alura e Oracle
-                </p>
-            </div>
+            <form id="produtoForm">
+                <input type="text" placeholder="Nome do Livro" id="nome-livro">
+                <input type="text" placeholder="Gênero" id="genero">
+                <input type="text" placeholder="Autor" id="autor">
+                <label for="imagem">Adicione uma imagem:</label>
+                <input type="file" id="imagem" accept="image/*">
+                <button id="add-produto-btn">Adicionar Produto</button>
+                <button id="cancelar-btn">Cancelar</button>
+            </form>
+        </section>    
+    </main>  
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <ul class="social-media list-unstyled d-flex justify-content-center mb-2">
+            <li class="mr-3"><a href="https://www.linkedin.com/in/carlos-eduardo-turina-014a5425b" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/anirutsolrak"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+        <div class="copyright">
+            <p>© 2024 por Carlos Eduardo Turina. <br>
+              Criado com Alura e Oracle
+            </p>
         </div>
     </footer>
     <script src="script.js"></script>
