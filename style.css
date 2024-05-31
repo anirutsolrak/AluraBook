@@ -72,7 +72,7 @@ main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 65%;
+    width: 85%;
 }
 
 .produto-card h3:hover,
