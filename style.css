@@ -67,25 +67,7 @@ main {
     text-align: center;
     }
 
-.produto-card h3,
-.produto-card .produto-info p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 85%;
-}
 
-.produto-card h3:hover,
-.produto-card .produto-info p:hover {
-    white-space: normal;
-    overflow: visible;
-    background-color: darkgoldenrod;
-    padding: 5px;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 10;
-    max-width: 20vw; 
-}
 
 .produto-card img.produto-imagem {
     width: 20vw; 
